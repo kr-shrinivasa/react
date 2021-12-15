@@ -14,7 +14,17 @@
     <div id="root"></div>
     <script type="text/babel">
 //React Code here
+
  ReactDOM.render(<div></div>,document.getElementById('root'));
+// let box=React.createElement("div",{className:"boxes"})
+let row1=React.createElement("div",{className:"container1",},React.createElement("div",{className:"box1"}),React.createElement("div",{className:"box1"}))
+
+let row2=React.createElement("div",{className:"container2",},React.createElement("div",{className:"box2"}))
+let row3 = React.createElement("div",{className:"container3"},React.createElement("div",{className:"box3"}),React.createElement("div",{className:"box3"}),React.createElement("div",{className:"box3",id:"hide"}))
+
+let main =React.createElement("section",{className:"main"},row1,row2,row3)
+ReactDOM.render(main,document.getElementById('root'));
+console.log(main)
 
 </script>
 <!--
